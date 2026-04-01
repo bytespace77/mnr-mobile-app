@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_wo_logo"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_12sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:text="MyKad Details"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_md"
+            android:textStyle="bold"
+            android:padding="@dimen/_6sdp"
+            android:background="@drawable/bg_glassy_translucent"/>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    />
+        <ImageView
+            android:id="@+id/logoRight"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/mnr_logo"
+            android:contentDescription="Logo"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/dottedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_1sdp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@drawable/bg_dashed_border_white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_90sdp">
+
+                        <!-- CardView -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cardCornerRadius="@dimen/_12sdp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardBackgroundColor="#80ffffff">
+
+                            <ImageView
+                                android:id="@+id/ivCard"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:visibility="gone" />
+
+                            <!-- Optional placeholder overlay (blurred) -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:id="@+id/llCardPlaceholder">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    app:tint="@android:color/white" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- Button over CardView (not blurred) -->
+                        <TextView
+                            android:id="@+id/tvScanKad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Scan MyKad"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_12ssp"
+                            android:background="@drawable/bg_button_bluish"
+                            android:paddingHorizontal="@dimen/_20sdp"
+                            android:paddingVertical="@dimen/_7sdp"
+                            android:layout_gravity="center"
+                            android:elevation="20dp" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Upload / Capture Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_6sdp">
+
+                <TextView
+                    android:id="@+id/tvUploadPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Photo"
+                    android:background="@drawable/bg_solid_white_rounded"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_margin="@dimen/_5sdp"/>
+
+                <TextView
+                    android:id="@+id/tvCaptrure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Capture Photo"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/bg_solid_white_rounded"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    android:padding="@dimen/_5sdp"/>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                app:cardBackgroundColor="#40ffffff"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_lg">
+
+                    <!--Contact Number-->
+                    <!-- Contact Number -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:background="@drawable/bg_glassy_translucent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contact Number"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@drawable/activity_card_details_my_kad_ic_contact_number"
+                                app:tint="@color/white"/>
+
+                            <EditText
+                                android:id="@+id/etContactNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_14sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:inputType="number"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_xsm" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/viewContactNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="#00F4F4F4" />
+
+                    <!-- Company Name -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:background="@drawable/bg_glassy_translucent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Company Name"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@drawable/activity_card_details_my_kad_ic_company_name"
+                                app:tint="@color/white"/>
+
+                            <EditText
+                                android:id="@+id/etCompanyName"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_14sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapCharacters"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_xsm" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/viewCompanyName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="#00F4F4F4" />
+
+                    <!-- Email -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:background="@drawable/bg_glassy_translucent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@drawable/activity_card_details_my_kad_ic_email"
+                                app:tint="@color/white"/>
+
+                            <EditText
+                                android:id="@+id/etEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_14sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:inputType="textEmailAddress"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_xsm" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/viewEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="#00F4F4F4" />
+
+                    <!-- Reg No -->
+                    <LinearLayout
+                        android:id="@+id/llRegNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:background="@drawable/bg_glassy_translucent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vehicle Registration No"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@drawable/activity_card_details_my_kad_ic_contact_number"
+                                app:tint="@color/white"/>
+
+                            <EditText
+                                android:id="@+id/etRegNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_14sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapCharacters"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_xsm" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/viewRegNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="#00F4F4F4" />
+
+                    <!-- Cardholder Name -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:background="@drawable/bg_glassy_translucent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cardholder Name"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@drawable/activity_card_details_my_kad_ic_card_holder_name"
+                                app:tint="@color/white"/>
+
+                            <EditText
+                                android:id="@+id/etCardHolderName"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_14sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:inputType="textPersonName"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_xsm" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/viewCardHolderName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="#00F4F4F4" />
+
+                    <!-- IC Number -->
+                    <LinearLayout
+                        android:id="@+id/llIc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:background="@drawable/bg_glassy_translucent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvIcNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="IC Number"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@android:drawable/ic_dialog_dialer"
+                                app:tint="@color/white"/>
+
+                            <EditText
+                                android:id="@+id/etCardNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_14sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_xsm" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <!--Address-->
+                    <!-- Address -->
+                    <LinearLayout
+                        android:id="@+id/llAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:background="@drawable/bg_glassy_translucent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Address"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_gravity="top"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:src="@drawable/activity_card_details_my_kad_ic_address"
+                                app:tint="@color/white"/>
+
+                            <EditText
+                                android:id="@+id/etAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:background="@android:color/transparent"
+                                android:inputType="textMultiLine"
+                                android:maxLines="3"
+                                android:gravity="top|start"
+                                android:singleLine="false"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_xsm" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/viewAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="#00F4F4F4" />
+
+                    <!-- Date of Birth -->
+                    <LinearLayout
+                        android:id="@+id/llDateOfBirth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:background="@drawable/bg_glassy_translucent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDateOfBirthTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date of Birth"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/ivDateOfBirth"
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@drawable/activity_card_details_my_kad_ic_address"
+                                app:tint="@color/white"/>
+
+                            <TextView
+                                android:id="@+id/tvDateOfBirth"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_xsm" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/viewDateOfBirth"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="#00F4F4F4" />
+
+
+                    <!--Date of brith-->
+                    <LinearLayout
+                        android:id="@+id/llPlksExpiry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvPlksExpiryTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PLKS Expiry"
+                            android:textColor="#C8CCDD"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/ivPlksExpiry"
+                                android:layout_width="@dimen/_8sdp"
+                                android:layout_height="@dimen/_8sdp"
+                                android:src="@drawable/activity_card_details_my_kad_ic_address" />
+
+                            <TextView
+                                android:id="@+id/tvPlksExpiry"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_10sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:textColor="#22306d"
+                                android:textSize="@dimen/text_size_xsm" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <!--Country-->
+                    <LinearLayout
+                        android:id="@+id/llCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_glassy_translucent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Country"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_8sdp"
+                                android:layout_height="@dimen/_8sdp"
+                                android:src="@drawable/activity_card_details_my_kad_ic_address"
+                                app:tint="@color/white"/>
+
+                            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                                android:id="@+id/spCountry"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:background="@android:color/transparent"
+                                app:smsp_searchHeaderText="Select country"
+                                app:smsp_isSearchable="true"
+                                app:smsp_enableFloatingLabel="false"
+                                app:smsp_floatingLabelText=""
+                                app:smsp_hint=""
+                                app:smsp_itemColor="@color/white"
+                                app:smsp_itemListColor="#7C4DFF"
+                                app:smsp_itemSize="@dimen/text_size_xsm"
+                                app:smsp_multilineError="false"
+                                app:smsp_selectedItemListColor="#22306d"
+                                app:smsp_arrowColor="@color/white"
+                                app:smsp_underlineColor="@android:color/transparent"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <!--State-->
+                    <!-- State -->
+                    <LinearLayout
+                        android:id="@+id/llState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:background="@drawable/bg_glassy_translucent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="State"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@drawable/activity_card_details_my_kad_ic_address"
+                                app:tint="@color/white"/>
+
+                            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                                android:id="@+id/spState"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:background="@android:color/transparent"
+                                app:smsp_enableFloatingLabel="false"
+                                app:smsp_searchHeaderText="Select state"
+                                app:smsp_isSearchable="true"
+                                app:smsp_hint=""
+                                app:smsp_itemColor="@color/white"
+                                app:smsp_itemListColor="#7C4DFF"
+                                app:smsp_itemSize="@dimen/text_size_xsm"
+                                app:smsp_multilineError="false"
+                                app:smsp_selectedItemListColor="#22306d"
+                                app:smsp_arrowColor="@color/white"
+                                app:smsp_underlineColor="@android:color/transparent"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/viewState"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="#00F4F4F4" />
+
+                    <!-- City -->
+                    <LinearLayout
+                        android:id="@+id/llCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:background="@drawable/bg_glassy_translucent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="City"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@drawable/activity_card_details_my_kad_ic_address"
+                                app:tint="@color/white"/>
+
+                            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                                android:id="@+id/spCity"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:background="@android:color/transparent"
+                                app:smsp_enableFloatingLabel="false"
+                                app:smsp_floatingLabelText=""
+                                app:smsp_searchHeaderText="Select city"
+                                app:smsp_isSearchable="true"
+                                app:smsp_hint=""
+                                app:smsp_itemColor="@color/white"
+                                app:smsp_itemListColor="#7C4DFF"
+                                app:smsp_itemSize="@dimen/text_size_xsm"
+                                app:smsp_multilineError="false"
+                                app:smsp_selectedItemListColor="#22306d"
+                                app:smsp_arrowColor="@color/white"
+                                app:smsp_underlineColor="@android:color/transparent"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/viewCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="#00F4F4F4" />
+
+                    <!-- Postal Code -->
+                    <LinearLayout
+                        android:id="@+id/llPostalCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:background="@drawable/bg_glassy_translucent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Postal Code"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@drawable/activity_card_details_my_kad_ic_contact_number"
+                                app:tint="@color/white"/>
+
+                            <EditText
+                                android:id="@+id/etPostalCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_14sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:inputType="number"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_xsm" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/viewPostalCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="#00F4F4F4" />
+
+                    <!--Resident-->
+                    <LinearLayout
+                        android:id="@+id/llResident"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Resident"
+                            android:textColor="#C8CCDD"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_8sdp"
+                                android:layout_height="@dimen/_8sdp"
+                                android:src="@drawable/activity_card_details_my_kad_ic_address" />
+
+                            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                                android:id="@+id/spResident"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_10sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:background="@color/white"
+                                app:smsp_enableFloatingLabel="false"
+                                app:smsp_floatingLabelText=""
+                                app:smsp_hint=""
+                                app:smsp_itemColor="#512DA8"
+                                app:smsp_itemListColor="#7C4DFF"
+                                app:smsp_itemSize="10sp"
+                                app:smsp_multilineError="false"
+                                app:smsp_selectedItemListColor="#22306d"
+                                app:smsp_underlineColor="@color/white"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/viewResident"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="#F4F4F4" />
+
+                    <!--Gender-->
+                    <LinearLayout
+                        android:id="@+id/llGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gender"
+                            android:textColor="#C8CCDD"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_8sdp"
+                                android:layout_height="@dimen/_8sdp"
+                                android:src="@drawable/activity_card_details_my_kad_ic_address" />
+
+                            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                                android:id="@+id/spGender"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_10sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:background="@color/white"
+                                app:smsp_enableFloatingLabel="false"
+                                app:smsp_floatingLabelText=""
+                                app:smsp_hint=""
+                                app:smsp_itemColor="#512DA8"
+                                app:smsp_itemListColor="#7C4DFF"
+                                app:smsp_itemSize="@dimen/text_size_xsm"
+                                app:smsp_multilineError="false"
+                                app:smsp_selectedItemListColor="#22306d"
+                                app:smsp_underlineColor="@color/white"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/viewGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="#F4F4F4"
+                        android:layout_marginBottom="@dimen/_10sdp"/>
+
+                    <!--Vehicle Category-->
+                    <LinearLayout
+                        android:id="@+id/llVinCat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vehicle Category"
+                            android:textColor="#C8CCDD"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_8sdp"
+                                android:layout_height="@dimen/_8sdp"
+                                android:src="@drawable/activity_card_details_my_kad_ic_address" />
+
+                            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                                android:id="@+id/spVinCat"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_10sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:background="@color/white"
+                                app:smsp_enableFloatingLabel="false"
+                                app:smsp_floatingLabelText=""
+                                app:smsp_hint=""
+                                app:smsp_itemColor="#512DA8"
+                                app:smsp_itemListColor="#7C4DFF"
+                                app:smsp_itemSize="@dimen/text_size_xsm"
+                                app:smsp_multilineError="false"
+                                app:smsp_selectedItemListColor="#22306d"
+                                app:smsp_underlineColor="@color/white"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/viewVinCat"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="#F4F4F4"
+                        android:layout_marginBottom="@dimen/_10sdp"/>
+
+                    <!--vehicle type-->
+                    <LinearLayout
+                        android:id="@+id/llVinType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vehicle Type"
+                            android:textColor="#C8CCDD"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_8sdp"
+                                android:layout_height="@dimen/_8sdp"
+                                android:src="@drawable/activity_card_details_my_kad_ic_address" />
+
+                            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                                android:id="@+id/spVinType"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_10sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:background="@color/white"
+                                app:smsp_enableFloatingLabel="false"
+                                app:smsp_floatingLabelText=""
+                                app:smsp_hint=""
+                                app:smsp_itemColor="#512DA8"
+                                app:smsp_itemListColor="#7C4DFF"
+                                app:smsp_itemSize="@dimen/text_size_xsm"
+                                app:smsp_multilineError="false"
+                                app:smsp_selectedItemListColor="#22306d"
+                                app:smsp_underlineColor="@color/white"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/viewVinType"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="#F4F4F4"
+                        android:layout_marginBottom="@dimen/_10sdp"/>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/rlNext"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_60sdp"
+                android:background="@drawable/rounded_bg_white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="Next"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_xsm"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/activity_card_details_my_kad_ic_next_btn_right_icon"
+                    app:tint="@color/colorPrimary"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

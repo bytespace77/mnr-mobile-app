@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_wo_logo"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_12sdp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thank you for using\nSafeG Visitor Pass"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_lg"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_success"
+        app:tint="@color/green"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="An email/SMS has been sent\nto your phone as digital\nconfirmation for your visit"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_130sdp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/text_size_md"/>
+
+
+
+
+</RelativeLayout>

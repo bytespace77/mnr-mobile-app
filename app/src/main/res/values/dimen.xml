@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_sm">@dimen/_4sdp</dimen>
+    <dimen name="padding_md">@dimen/_8sdp</dimen>
+    <dimen name="padding_lg">@dimen/_12sdp</dimen>
+    <dimen name="padding_xl">@dimen/_16sdp</dimen>
+    <dimen name="padding_xxl">@dimen/_20sdp</dimen>
+    <dimen name="padding_xxxl">@dimen/_24sdp</dimen>
+
+    <dimen name="text_size_xsm">@dimen/_10ssp</dimen>
+    <dimen name="text_size_sm">@dimen/_12ssp</dimen>
+    <dimen name="text_size_md">@dimen/_14ssp</dimen>
+    <dimen name="text_size_lg">@dimen/_18ssp</dimen>
+    <dimen name="text_size_xl">@dimen/_22ssp</dimen>
+    <dimen name="text_size_xxl">@dimen/_26ssp</dimen>
+    <dimen name="text_size_xxxl">@dimen/_30ssp</dimen>
+
+
+</resources>
