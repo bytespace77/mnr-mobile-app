@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/_5sdp"
+    android:layout_marginHorizontal="@dimen/_2sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_10sdp">
+
+        <!-- Profile Picture -->
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/ic_person_24"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_background"
+            android:padding="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_10sdp" />
+
+        <!-- Staff Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="John Doe"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/montserrat_bold"/>
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📞 +60 123 456 789"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_9ssp"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginTop="@dimen/_2sdp" />
+
+            <TextView
+                android:id="@+id/tvStaffNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Staff No: ST12345"
+                android:textColor="#888888"
+                android:textSize="@dimen/_8ssp"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginTop="@dimen/_2sdp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_12sdp">
+
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_arrow_forward_24"
+        android:rotation="180"
+        android:contentDescription="Back"/>
+
+    <RelativeLayout
+        android:id="@+id/titleContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_2sdp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NOTICE"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:textColor="#22306D"
+            android:textStyle="bold"
+            android:textSize="@dimen/_30sdp"/>
+
+        <!-- Logo on right -->
+        <ImageView
+            android:id="@+id/logoRight"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:contentDescription="Logo"
+            android:src="@drawable/mnr_logo_removebg" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/mykad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mykad"
+        android:layout_below="@+id/titleContainer"/>
+
+    <ImageView
+        android:id="@+id/instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/instructions"
+        android:layout_below="@+id/mykad"
+        android:layout_marginBottom="80dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rlOkay"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/activity_welcome_malaysian_pr_bg_btn"
+        android:layout_alignBottom="@id/instructions"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="-30dp"
+        android:layout_marginEnd="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="OK"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_md"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

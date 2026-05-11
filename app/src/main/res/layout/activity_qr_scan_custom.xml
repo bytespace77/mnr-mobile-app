@@ -1,0 +1,73 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <!-- Camera Preview — hidden, kept for compatibility -->
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/barcode_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:zxing_use_texture_view="true" />
+
+    <!-- Dark translucent overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
+
+    <!-- Transparent center frame (scan area) -->
+    <View
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:background="@drawable/qr_frame_outline" />
+
+    <!-- Instruction text -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:text="Place a QR Code within the frame to scan it."
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:fontFamily="@font/montserrat_medium" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Scan Invitation QR Code"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:fontFamily="@font/montserrat_medium" />
+
+    <!-- Optional back button -->
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/back_btn"
+        android:contentDescription="Back"/>
+
+    <!-- ✅ Hidden EditText to receive USB HID scanner input -->
+    <EditText
+        android:id="@+id/etScanInput"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:alpha="0"
+        android:inputType="text"
+        android:imeOptions="flagNoExtractUi"
+        android:background="@null"
+        android:cursorVisible="false"
+        android:textSize="1sp" />
+
+</FrameLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_wo_logo_2">
+
+    <!-- ✅ Thank you title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:gravity="center"
+        android:text="Thank you for using\nSafeG Visitor Pass"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_lg"
+        android:fontFamily="@font/montserrat_bold"/>
+
+    <!-- ✅ Success icon -->
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_success"
+        app:tint="@color/green"
+        android:scaleType="fitCenter"
+        android:contentDescription="Success"/>
+
+    <!-- ✅ Bottom section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_80sdp">
+
+        <!-- ✅ VVIP name in gold -->
+        <TextView
+            android:id="@+id/tvVvipName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#FFD700"
+            android:textSize="@dimen/text_size_md"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- ✅ Card issued message -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Card Has Been Issued Successfully"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_md"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- ✅ Divider -->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="3dp"
+            android:background="#44FFFFFF"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- ✅ Auto return hint -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This screen will close automatically"
+            android:textColor="#88FFFFFF"
+            android:textSize="11sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

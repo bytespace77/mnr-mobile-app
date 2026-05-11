@@ -1,0 +1,137 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_wo_logo_2">
+
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/barcode_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:zxing_use_texture_view="true" />
+
+    <!-- ✅ Hidden QR input — no keyboard -->
+    <EditText
+        android:id="@+id/qrInput"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:inputType="textNoSuggestions"
+        android:cursorVisible="false"
+        android:visibility="visible"/>
+
+    <!-- ✅ Top scanner frame area — reduced weight to push content up -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0">
+
+        <FrameLayout
+            android:layout_width="284dp"
+            android:layout_height="282dp"
+            android:layout_gravity="center"
+            android:background="@drawable/qr_scan_frame"/>
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:contentDescription="Back"
+            android:src="@drawable/back_btn"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <!-- ✅ Bottom info card — increased weight -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ✅ Arrow — dispense page -->
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="Dispenser"
+            android:rotation="90"
+            android:scaleType="fitCenter"
+            android:src="@drawable/arrow"
+            android:visibility="gone"
+            app:tint="@color/white"/>
+
+        <!-- ✅ Icon — default ic_success for Invitation, overridden in CollectCardActivity -->
+        <ImageView
+            android:id="@+id/ivScanIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="12dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="Icon"
+            android:src="@drawable/ic_success"
+            app:tint="@color/green"/>
+
+        <!-- ✅ Main message — overridden in CollectCardActivity -->
+        <TextView
+            android:id="@+id/collectCardMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="Scan Invitation QR Code"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <!-- ✅ Subtitle — overridden in CollectCardActivity -->
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:text="Place QR Code within the\nQR Scanner"
+            android:textColor="#CCFFFFFF"
+            android:textSize="26sp"/>
+
+        <!-- ✅ Thank you — only CollectCardActivity -->
+        <TextView
+            android:id="@+id/tvThankYou"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="Thank you - Have a Great Day"
+            android:textColor="#68DBA9"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</LinearLayout>

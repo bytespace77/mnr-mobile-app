@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_wo_logo_2"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/_18sdp"
+    android:paddingTop="@dimen/_20sdp"
+    android:paddingEnd="@dimen/_18sdp">
+
+    <!-- ✅ Top bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:elevation="50dp"
+            android:src="@drawable/back_btn"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:text="Update Visit Details"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_md"
+            android:textStyle="bold"
+            android:padding="@dimen/_6sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:background="@drawable/bg_glassy_translucent"/>
+
+    </LinearLayout>
+
+    <!-- ✅ Search Host Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_12sdp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardPreventCornerOverlap="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_12sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SEARCH HOST"
+                android:textColor="#888888"
+                android:textSize="@dimen/_8ssp"
+                android:fontFamily="@font/montserrat_bold"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="@dimen/_6sdp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/bg_input_field"
+                android:layout_marginBottom="@dimen/_8sdp">
+
+                <ImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:src="@drawable/ic_search"
+                    app:tint="@color/colorPrimary"/>
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_toStartOf="@id/ivSearch"
+                    android:background="@android:color/transparent"
+                    android:hint="Name or Staff ID..."
+                    android:textColor="#111827"
+                    android:textColorHint="#AAAAAA"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_sm"
+                    android:fontFamily="@font/montserrat_medium"/>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvStaffList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:clipToPadding="false"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- ✅ Details + buttons -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/llVisitDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ✅ Reason + Visitor Type card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_12sdp">
+
+                    <!-- Reason label -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_6sdp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:letterSpacing="0.08"
+                        android:text="REASON"
+                        android:textColor="#888888"
+                        android:textSize="@dimen/_8ssp"/>
+
+                    <!-- ✅ Reason spinner -->
+                    <LinearLayout
+                        android:id="@+id/llReason"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:background="@drawable/bg_input_field"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:paddingEnd="@dimen/_8sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:src="@drawable/activity_card_details_my_kad_ic_email"
+                            app:tint="@color/colorPrimary"/>
+
+                        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                            android:id="@+id/spReason"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/montserrat_bold"
+                            app:smsp_arrowColor="@color/colorPrimary"
+                            app:smsp_enableFloatingLabel="false"
+                            app:smsp_hint=""
+                            app:smsp_hintColor="@android:color/transparent"
+                            app:smsp_hintSize="@dimen/text_size_sm"
+                            app:smsp_isSearchable="true"
+                            app:smsp_itemColor="#111827"
+                            app:smsp_itemListColor="@color/colorPrimary"
+                            app:smsp_itemSize="@dimen/text_size_xsm"
+                            app:smsp_multilineError="false"
+                            app:smsp_searchHeaderText="Select Reason"
+                            app:smsp_selectedItemListColor="@color/colorPrimary"
+                            app:smsp_underlineColor="@android:color/transparent" />
+
+                    </LinearLayout>
+
+                    <!-- Visitor Type label -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_6sdp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:letterSpacing="0.08"
+                        android:text="VISITOR TYPE"
+                        android:textColor="#888888"
+                        android:textSize="@dimen/_8ssp"/>
+
+                    <!-- ✅ Visitor type spinner -->
+                    <LinearLayout
+                        android:id="@+id/llLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:background="@drawable/bg_input_field"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:paddingEnd="@dimen/_8sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:src="@drawable/activity_card_details_my_kad_ic_address"
+                            app:tint="@color/colorPrimary"/>
+
+                        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                            android:id="@+id/spLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/montserrat_bold"
+                            app:smsp_arrowColor="@color/colorPrimary"
+                            app:smsp_enableFloatingLabel="false"
+                            app:smsp_hint=""
+                            app:smsp_hintColor="@android:color/transparent"
+                            app:smsp_hintSize="@dimen/text_size_sm"
+                            app:smsp_isSearchable="true"
+                            app:smsp_itemColor="#111827"
+                            app:smsp_itemListColor="@color/colorPrimary"
+                            app:smsp_itemSize="@dimen/text_size_xsm"
+                            app:smsp_multilineError="false"
+                            app:smsp_searchHeaderText="Select Visitor Type"
+                            app:smsp_selectedItemListColor="@color/colorPrimary"
+                            app:smsp_underlineColor="@android:color/transparent"/>
+
+                    </LinearLayout>
+
+                    <!-- Hidden sub location -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                            android:id="@+id/spSubLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/montserrat_medium"
+                            app:smsp_enableFloatingLabel="false"
+                            app:smsp_hint=""
+                            app:smsp_isSearchable="true"
+                            app:smsp_itemColor="#111827"
+                            app:smsp_itemListColor="@color/colorPrimary"
+                            app:smsp_itemSize="@dimen/text_size_md"
+                            app:smsp_multilineError="false"
+                            app:smsp_searchHeaderText="Select Sub Location"
+                            app:smsp_selectedItemListColor="@color/colorPrimary"
+                            app:smsp_underlineColor="@android:color/transparent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- ✅ Next button -->
+            <RelativeLayout
+                android:id="@+id/rlNext"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/btn_primary_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:text="Next"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_md"
+                    android:fontFamily="@font/montserrat_bold"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:src="@drawable/arrow"
+                    android:scaleType="fitCenter"
+                    app:tint="@color/colorPrimary"/>
+
+            </RelativeLayout>
+
+            <!-- ✅ Back button -->
+            <RelativeLayout
+                android:id="@+id/rlMainPage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/btn_secondary_bg">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Back to Previous Screen"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_md"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat_bold"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Hidden spinner for code compatibility -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+            android:id="@+id/spCompany"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/montserrat_medium"
+            app:smsp_enableFloatingLabel="false"
+            app:smsp_hint=""
+            app:smsp_isSearchable="true"
+            app:smsp_itemColor="#111827"
+            app:smsp_itemListColor="@color/colorPrimary"
+            app:smsp_itemSize="@dimen/text_size_md"
+            app:smsp_multilineError="false"
+            app:smsp_searchHeaderText="Select Company"
+            app:smsp_selectedItemListColor="@color/colorPrimary"
+            app:smsp_underlineColor="@android:color/transparent"/>
+
+    </LinearLayout>
+
+</LinearLayout>

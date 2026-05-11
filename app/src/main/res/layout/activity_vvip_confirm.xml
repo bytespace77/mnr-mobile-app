@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_wo_logo_2"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_12sdp">
+
+    <!-- Top bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="39dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:text="VVIP Details"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_md"
+            android:textStyle="bold"
+            android:padding="@dimen/_6sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:background="@drawable/bg_glassy_translucent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:src="@drawable/mnr_logo_removebg"
+            android:contentDescription="Logo"/>
+
+    </LinearLayout>
+
+    <!-- Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:orientation="vertical">
+
+            <!-- VVIP Badge -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VVIP"
+                    android:textColor="#FFFFFF"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:background="@drawable/bg_vvip_badge"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="8dp" />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                app:cardBackgroundColor="#40ffffff"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_lg">
+
+                    <!-- Visitor Name -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:background="@drawable/bg_glassy_translucent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Visitor Name"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8ssp"
+                            android:fontFamily="@font/montserrat_medium" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@drawable/ic_person_24"
+                                app:tint="@color/white"/>
+
+                            <TextView
+                                android:id="@+id/tvVvipName"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_14sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:gravity="center_vertical"
+                                android:text="—"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_xsm"
+                                android:fontFamily="@font/montserrat_medium" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="#00F4F4F4" />
+
+                    <!-- IC / Passport No -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:background="@drawable/bg_glassy_translucent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="IC / Passport No"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8ssp"
+                            android:fontFamily="@font/montserrat_medium" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@android:drawable/ic_dialog_dialer"
+                                app:tint="@color/white"/>
+
+                            <TextView
+                                android:id="@+id/tvVvipIc"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_14sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:gravity="center_vertical"
+                                android:text="—"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_xsm"
+                                android:fontFamily="@font/montserrat_medium" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Proceed button -->
+            <RelativeLayout
+                android:id="@+id/rlProceed"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:background="@drawable/rounded_bg_white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Proceed to Face Scan"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_xsm"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/activity_card_details_my_kad_ic_next_btn_right_icon"
+                    app:tint="@color/colorPrimary" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        //noinspection JcenterRepositoryObsolete
+        maven { url 'https://jcenter.bintray.com' } // Warning: this repository is going to shut down soon
+        maven { url 'https://jitpack.io' }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        //noinspection JcenterRepositoryObsolete
+        maven { url 'https://jcenter.bintray.com' } // Warning: this repository is going to shut down soon
+        maven { url 'https://jitpack.io' }
+    }
+
+//    versionCatalogs {
+//        create('libs') {
+//            from(files("../OnDevice-Face-Recognition-Android/gradle/libs.versions.toml"))
+//        }
+//    }
+}
+rootProject.name = "Safeg"
+include ':app'
+
+include(":frlib")
+project(":frlib").projectDir = file("frlib_library")

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_280sdp"
+    android:layout_height="@dimen/_300sdp"
+    android:background="@drawable/dialog_bg">
+
+    <TextView
+        android:id="@+id/dialogMyKadFailedToRead_tv_mykadFailedToRead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_75sdp"
+        android:text="MyKad failed to read."
+        android:textColor="#FF0000"
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dialogMyKadFailedToRead_tv_pleaseFillInManually"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialogMyKadFailedToRead_tv_mykadFailedToRead"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:text="Please fill in manually or retry"
+        android:textColor="#22306d"
+        android:textSize="@dimen/_14ssp" />
+
+    <TextView
+        android:id="@+id/dialogMyKadFailedToRead_tv_addManually"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@id/dialogMyKadFailedToRead_tv_pleaseFillInManually"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_23sdp"
+        android:background="@drawable/dialog_my_kad_failed_to_read_add_manually_bg_btn"
+        android:gravity="center"
+        android:text="Add Manually"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dialogMyKadFailedToRead_tv_retry"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@id/dialogMyKadFailedToRead_tv_addManually"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/dialog_my_kad_failed_to_read_add_manually_bg_btn"
+        android:gravity="center"
+        android:text="Retry"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
