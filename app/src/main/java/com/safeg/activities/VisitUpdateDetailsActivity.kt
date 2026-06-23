@@ -74,6 +74,8 @@ class VisitUpdateDetailsActivity : AppCompatActivity(), View.OnClickListener {
                     Common.showToast(this, "Please Select a Reason", Common.ToastType.WARNING)
                 selectedVisitorType.isEmpty() ->
                     Common.showToast(this, "Please Select Visitor Type", Common.ToastType.WARNING)
+                StaticData.request.staffNo.isNullOrBlank() ->
+                    Common.showToast(this, "Please Select a Person to Visit", Common.ToastType.WARNING)
                 else -> {
                     StaticData.request.reason = selectedReason
                     StaticData.request.visitorTypeId = selectedVisitorType.toIntOrNull() ?: 0
